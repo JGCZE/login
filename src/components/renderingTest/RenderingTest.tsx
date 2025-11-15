@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import GrandParent from "./GrandParent"
 import { Button } from "../ui/button"
 import { useRenderingTest } from "./context/context"
@@ -6,11 +6,6 @@ import { useRenderingTest } from "./context/context"
 const RenderingTest = () => {
   const [num, setNum] = useState(0)
   const { count, setCount } = useRenderingTest()
-
-  useEffect(() => {
-    console.log(num)
-  }, [num])
-
 
   return (
     <div className="border-2 border-amber-400 p-4">
